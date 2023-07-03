@@ -72,11 +72,11 @@ variable "admin_rails_secret" {
 }
 
 variable "admin_secret_key_base"  { 
-  default = "427f5abd6e7b62e463b14474317b78ab" 
+  default = "" 
 }
 
 variable "zone_id" { 
-  default = "Z0623017NTWWOTICBBWP"
+  default = ""
 }
 
 variable "environment_prefix" {
@@ -84,9 +84,9 @@ variable "environment_prefix" {
 }
 
 variable "web_hook" {
-  default = "https://hooks.slack.com/services/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"
+  default = ""
 }
 
 variable "github_token" {
-  default = "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"
+  default = ""
 }
