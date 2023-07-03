@@ -3,7 +3,7 @@
 init:
 	# source ./keys.sh
 	gpg --verbose --batch --gen-key unnatennded.key
-	gpg --export 07959988387334AF | base64 > gpg.pubkey
+	gpg --export ${key} | base64 > gpg.pubkey
 	cd ecr ; terraform init
 	cd certificates ; terraform init
 	cd dev ; terraform init
