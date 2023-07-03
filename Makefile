@@ -43,11 +43,7 @@ ecr.push:
 	aws ecr get-login-password --region us-west-2 | docker login --username AWS --password-stdin ${ECR_URL}
 	docker build -f ../api/Dockerfile ../api -t api:$(e)
 	docker tag api:$(e) ${ECR_URL}/api:$(e)
-	docker tag app:$(e) ${ECR_URL}/app:$(e)
-	docker tag admin:$(e) ${ECR_URL}/admin:$(e)		
 	docker push ${ECR_URL}/api:$(e)
-	docker push ${ECR_URL}/app:$(e)
-	docker push ${ECR_URL}/admin:$(e)
 
 certificates.plan:
 	cd certificates ; terraform plan -out "certificates.plan"
